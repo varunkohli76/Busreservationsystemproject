@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+span {
+    color: white;
+}
+
+.welcome-container {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    background-image: url("../images/image1.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+form {
+    margin-top: 5%;
+    text-align: center;
+}
+
+::placeholder {
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input {
+    height: 40px;
+}
+.btn1{
+    background-color: rgba(0, 0, 255, 0.823);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 6px 40px;
+    border-radius: 4px;
+    outline: none;
+}
+.btn2{
+    background-color: rgba(0, 0, 255, 0.823);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 6px 42px;
+    border-radius: 4px;
+    margin-left: 20px;
+    outline: none;
+    margin-top: 4px;
+}
+
+.btn3{
+    background-color: rgb(216, 61, 61);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 7px 15px;
+    margin-top: 15px;
+}
+
+.Register-heading {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 4%;
+    font-weight: 700;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.navbar-nav .nav-item {
+    margin-right: 40px;
+}
+
+.navbar-nav-neugo {
+    margin-left: auto;
+}
+
+.card-content {
+    margin-top: 12%;
+}
+
+.custom-card {
+    background-color: #00000082;
+    color: white;
+   min-height: 400;
+}
+
+a {
+    text-decoration: none;
+}
+.box{
+    width:100%;
+    height:100px;
+    background-color: #000000cf;
+    margin-top: 15%;
+    border-radius: 8px;
+}
+.fields{
+    margin-top: 1%;
+}
+label{                    /*it colors the text of the going to leaving from*/
+    color: white;
+}
+
