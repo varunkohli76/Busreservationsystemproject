@@ -19,10 +19,15 @@
 
 let busroute = [
     { from: "CHANDIGARH", to: "SUJANPUR H.P", Timings: "06:15AM", Type: "AC", Price: 435 },
+    { from: "SUJANPUR H.P", to: "CHANDIGARH", Timings: "01:00PM", Type: "AC", Price: 435 },
     { from: "CHANDIGARH", to: "SUJANPUR H.P", Timings: "08:30AM", Type: "ORD", Price: 385 },
-    { from: "CHANDIGARH", to: "MANALI", Timings: "09:30AM", Type: "ORD", Price: 385 },
+    { from: "SUJANPUR H.P", to: "CHANDIGARH", Timings: "03:00PM", Type: "ORD", Price: 385 },
+    { from: "CHANDIGARH", to: "MANALI", Timings: "09:30AM", Type: "ORD", Price: 470 },
+    { from: "MANALI", to: "CHANDIGARH", Timings: "09:00AM", Type: "ORD", Price: 470 },
     { from: "CHANDIGARH", to: "MANALI", Timings: "08:00PM", Type: "AC", Price: 540 },
-    { from: "CHANDIGARH", to: "MANALI", Timings: "08:00PM", Type: "ORD", Price: 480 },
+    { from: "MANALI", to: "CHANDIGARH", Timings: "10:30AM", Type: "AC", Price: 470 },
+    { from: "CHANDIGARH", to: "MANALI", Timings: "08:00PM", Type: "ORD", Price: 470},
+    { from: "MANALI", to: "CHANDIGARH", Timings: "04:00P,", Type: "ORD", Price: 470 },
     { from: "CHANDIGARH", to: "HAMIRPUR", Timings: "06:40AM", Type: "AC", Price: 420 },
     { from: "CHANDIGARH", to: "DEHLI", Timings: "05:00PM", Type: "AC", Price: 400 },
     { from: "CHANDIGARH", to: "DEHLI", Timings: "09:00PM", Type: "AC", Price: 400 },
@@ -58,6 +63,7 @@ button.addEventListener("click", function () {
                 <th>TYPE</th>
                 <th>PRICE</th>
                 <th>BOOK</th>
+                <th>CANCEL</th>
             </tr>
         </thead>
         <tbody>
@@ -72,7 +78,8 @@ button.addEventListener("click", function () {
                 <td>${busroute[i].Timings}</td>
                 <td>${busroute[i].Type}</td>
                 <td>${busroute[i].Price}</td>
-                <td><a href="assets/busseats.html" button type="submit"class="btn btn-info">BOOK</a></button></td>    
+                <td><a href="assets/busseats.html" button type="submit"class="btn btn-info">BOOK</a></button></td>
+                <td><a href="#" button type="submit"class="btn btn-danger">CANCEL</a></button></td>    
             </tr>
         `;
         }
