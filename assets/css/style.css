@@ -56,12 +56,14 @@ input {
 }
 
 .btn3{
-    background-color: rgb(216, 61, 61);
-    border-radius: 4px;
+    background-color: rgb(235, 8, 8);
+    border-radius: 10px;
     font-size: 15px;
     font-weight: 700;
-    padding: 7px 15px;
+    padding: 6px 6px;
     margin-top: 15px;
+    outline: none;
+    margin-left: 8%;
 }
 
 .Register-heading {
@@ -88,6 +90,7 @@ input {
     background-color: #00000082;
     color: white;
    min-height: 400;
+   background-attachment: fixed;
 }
 
 a {
@@ -99,11 +102,23 @@ a {
     background-color: #000000cf;
     margin-top: 15%;
     border-radius: 8px;
+    background-attachment:fixed;
 }
 .fields{
-    margin-top: 1%;
+    margin-top: 2%;
 }
 label{                    /*it colors the text of the going to leaving from*/
     color: white;
 }
+.box1{
+    background-color: rgba(240, 248, 255, 0.703);
+}
+.bookseats{
+    background-color: red;
+    color: black;
+    font-weight: 700;
+    padding:2px 2px;
+    outline: none;
+}
+
 
