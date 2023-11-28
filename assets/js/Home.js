@@ -89,31 +89,6 @@ button.addEventListener("click", function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // function submitform() {
 //     var leavingFrom = document.getElementById("Leaving").value;
 //     if (leavingFrom.trim() == "") {
