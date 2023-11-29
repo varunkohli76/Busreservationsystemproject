@@ -7,19 +7,24 @@ function validate() {
     let specialcharacters = /[@,$,%,&,*,]/g;
     let lowercase = /[a-z]/g;
     let numbers = /[0-9]/g;
-    let str= /^[a-zA-Z0-9]+$/;
+    let str = /^[a-zA-Z0-9]+$/;
 
     // var usercheck = /^[a-z][A-Z][0-9][_]{3,15}$/;
     // var emailcheck = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     // var passwordcheck = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
 
-    if (username == ""&&!username.match(str)) {
+    if (username == "" && !username.match(str)) {
         document.getElementById('usererror').innerHTML = " Enter the Username";
         document.getElementById('usererror').style.color = "red";
         return false;
     }
-    else if(!username.match(str)){
-        document.getElementById('usererror').innerHTML = "Only alpha-numeric characters are alowed";
+    else if (username.trim() !== username) {
+        document.getElementById('usererror').innerHTML = "Username cannot start or end with a space";
+        document.getElementById('usererror').style.color = "red";
+        return false;
+    }
+    else if (!username.match(str)) {
+        document.getElementById('usererror').innerHTML = "Only alpha-numeric characters are allowed";
         document.getElementById('usererror').style.color = "red";
         return false;
     }
@@ -31,12 +36,15 @@ function validate() {
         document.getElementById('emailerror').style.color = "red";
         return false;
     }
+    else if (email.trim() === email) {
+        document.getElementById('emailerror').innerHTML = "email cannot start or end with a space";
+        document.getElementById('emailerror').style.color = "red";
+        return false;
+    }
     else {
         document.getElementById('emailerror').innerHTML = "";
     }
-
-
-    if (password == "") {
+    if (password == ""){
         document.getElementById('Passworderror').innerHTML = " Enter the password";
         document.getElementById('Passworderror').style.color = "red";
         return false;
@@ -78,7 +86,7 @@ function validate() {
         details.push(userdetails);
 
         localStorage.setItem('details', JSON.stringify(details));
-               
+
         alert("User Account created successfully");
     }
 }
