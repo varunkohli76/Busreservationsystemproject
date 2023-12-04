@@ -22,10 +22,7 @@
                                     <a class="nav-link" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">About Us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Book Tickets Online</a>
+                                    <a class="nav-link" href="Home.html">Book Tickets Online</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -58,10 +55,11 @@
         <div class="row justify-content-center card-content">
             <div class="col-lg-5">
                 <div class="card custom-card">
-                    <form action="index.html" onsubmit="return validate()" autocomplete="on" class="form">
+                    <form action="#" onclick="return validate()" autocomplete="on" class="form">
                         <h4 class="card-title Register-heading">SIGN-UP</h4>
+                        <div id="successMessage" style="color: rgb(69, 212, 69);"></div>
                         <div class="mb-3">
-                            <input type="text" id="uname" name="username" size="50" placeholder="Enter Username"><br>
+                            <input type ="text" id="uname" name="username" size="50" placeholder="Enter Username"><br>
                             <span id="usererror"></span>
                         </div>
                         <div class="mb-3">
@@ -69,13 +67,14 @@
                             <span id="emailerror"></span>
                         </div>
                         <div class="mb-3">
-                            <input type="password" id="pwd" name="password" size="50" placeholder="Enter Password"><br>
+                            <input type="text" id="pwd" name="password" size="50" placeholder="Enter Password"><br>
                             <span id="Passworderror"></span>
                         </div>
                         <button type="submit" class="btn2" role="button">Register</button>
-                        <a href="Home.html" class="btn2" role="button">Skip</a>
+                        <button type="submit" class="btn2" onclick="homepage()">Skip</button>
                        
                     </form>
+                   
                 </div>
             </div>
         </div>

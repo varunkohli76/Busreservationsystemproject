@@ -27,7 +27,7 @@ let busroute = [
     { from: "CHANDIGARH", to: "MANALI", Timings: "08:00PM", Type: "AC", Price: 540 },
     { from: "MANALI", to: "CHANDIGARH", Timings: "10:30AM", Type: "AC", Price: 470 },
     { from: "CHANDIGARH", to: "MANALI", Timings: "08:00PM", Type: "ORD", Price: 470},
-    { from: "MANALI", to: "CHANDIGARH", Timings: "04:00P,", Type: "ORD", Price: 470 },
+    { from: "MANALI", to: "CHANDIGARH", Timings: "04:00PM", Type: "ORD", Price: 470 },
     { from: "CHANDIGARH", to: "HAMIRPUR", Timings: "06:40AM", Type: "AC", Price: 420 },
     { from: "CHANDIGARH", to: "DEHLI", Timings: "05:00PM", Type: "AC", Price: 400 },
     { from: "CHANDIGARH", to: "DEHLI", Timings: "09:00PM", Type: "AC", Price: 400 },
@@ -46,9 +46,10 @@ let button = document.getElementById('btn7');
 button.addEventListener("click", function () {
     let start = document.getElementById('From').value;
     let destination = document.getElementById('To').value;
+    let go = document.getElementById('date').value;
 
-    if (start === "" && destination === "") {
-        alert("Enter the first destination and last destination ");
+    if (start === "" && destination === "" && go === "" ) {
+        alert("Enter the first and last destination with date");
     }
     else if (start === destination) {
         alert("Same fields are not allowed please select different fields");
@@ -62,12 +63,12 @@ button.addEventListener("click", function () {
                 <th>TIMINGS</th>
                 <th>TYPE</th>
                 <th>PRICE</th>
-                <th>BOOK</th>
-                <th>CANCEL</th>
+                <th>SELECT SEAT LAYOUT</th>
             </tr>
         </thead>
         <tbody>
 `;
+
     for (let i = 0; i < busroute.length; i++) {
         if (busroute[i].from === start && busroute[i].to === destination) {
             document.getElementById('storebusesdetails').innerHTML = //busroute[i].from + ' ' +'to' + busroute[i].to + busroute[i].Timings+"<br>";
@@ -78,8 +79,7 @@ button.addEventListener("click", function () {
                 <td>${busroute[i].Timings}</td>
                 <td>${busroute[i].Type}</td>
                 <td>${busroute[i].Price}</td>
-                <td><a href="assets/busseats.html" button type="submit"class="btn btn-info">BOOK</a></button></td>
-                <td><a href="#" button type="submit"class="btn btn-danger">CANCEL</a></button></td>    
+                <td><a href="assets/busseats.html" button type="submit"class="btn btn-info">Select Layout</a></button></td>  
             </tr>
         `;
         }
